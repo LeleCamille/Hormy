@@ -28,7 +28,7 @@ function ListaPlanta() {
 
     HortaBloco.innerHTML = '';
 
-    myPlants.forEach(Planta => {
+    myPlants.forEach((Planta, index) => {
         const PlantaInfo = PlantaDatabase[Planta.type] || {};
         const PlantaCard = document.createElement('div');
         PlantaCard.className = 'Planta-card';
@@ -38,19 +38,19 @@ function ListaPlanta() {
             <p>Última rega: XXXX</p>
             <p>Próxima rega: XXXX</p>
         `;
-        HortaBloco.appendChild(PlantaCard);
-
-        const botaoExcluir = document.createElement('button')
-        botaoExcluir.textContent = 'X'
-        botaoExcluir.classList.add('botao-excluir')
+        
+        const botaoExcluir = document.createElement('button');
+        botaoExcluir.textContent = 'X';
+        botaoExcluir.classList.add('botao-excluir');
       
-        botaoExcluir.addEventListener('click', function () {
-          if (textarea) {
-            textarea.remove()
-            novoBotao.remove()
-            botaoExcluir.remove()
-          }
-        })
+        botaoExcluir.addEventListener('click', function() {
+            myPlants.splice(index, 1);
+            PlantaCard.remove();
+            ListaPlanta();
+        });
+        
+        PlantaCard.appendChild(botaoExcluir);
+        HortaBloco.appendChild(PlantaCard);
     });
 }
 
