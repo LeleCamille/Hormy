@@ -75,14 +75,17 @@ button:hover {
 }
 
 .Plantas {
+    flex: wrap;
     display: inline-block;
     vertical-align: top;
     width: calc(25% - 2rem);
+    weight: calc(25% - 2rem);
     margin: 1rem;
     padding: 1rem;
     background-color: var(--blocos);
     border-radius: 8px;
     text-align: left;
+    min-width: 25%;
 }
 
 .Plantas h2 {
@@ -157,7 +160,6 @@ button:hover {
     background-color: var(--main-color);
 }
 
-/*PAGE- MINHA HORTA*/
 .Horta-Bloco {
     display: grid;
     gap: 1rem;
