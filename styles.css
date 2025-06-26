@@ -1,0 +1,287 @@
+:root {
+    --background: #f5f5f5;
+    --font: #333;
+    --main-color: #54c958;
+    --blocos: #e8f5e9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--font);
+}
+
+header {
+    background-color: var(--main-color);
+    color: var(--background);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color:  var(--background);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a.atual, nav a:hover {
+    background-color: #3e8e41;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--main-color);
+    color: var(--background);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #266b28;
+}
+
+/*PAGE-INICIO*/
+.Inicio {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.Artigo {
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 100%;
+}
+
+.Plantas {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--blocos);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.Plantas h2 {
+    color: var(--main-color);
+    margin-top: 0;
+    border-bottom: 1px solid #2E7D32;
+    padding-bottom: 0.5rem;
+}
+
+
+/*PAGE- MINHA HORTA*/
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.plant-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.plant-card h3 {
+    margin-top: 0;
+    color: #2E7D32;
+}
+
+.add-plant-form {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.add-plant-form input, 
+.add-plant-form select {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-plant-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+
+/*PAGE- MINHA HORTA*/
+.Horta-Bloco {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+    border: 2px dotted var(--main-color);
+}
+
+.plant-card {
+    background-color: var(--background);
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+}
+
+.plant-card h3 {
+    margin-top: 0;
+    color: #2E7D32;
+}
+
+.AddPlanta-Bloco {
+    background-color: var(--background);
+    padding: 1.5rem;
+    border: 2px dotted var(--main-color);
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.AddPlanta-Bloco input, 
+.AddPlanta-Bloco select {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.AddPlanta-Bloco button {
+    background-color: var(--main-color);
+    color: var(--background);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/*PAGE- DIARIO */
+.calendario{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.controles-calendario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.controles-calendario button {
+    background: var(--main-color);
+    color: var(--background);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.grade-calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.dia-calendario {
+    aspect-ratio: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dia-calendario:hover {
+    background-color: #f0f0f0;
+}
+
+.dia-calendario.vazio {
+    background-color: #f9f9f9;
+    cursor: default;
+}
+
+.dia-calendario.hoje {
+    border: 2px solid #4CAF50;
+}
+
+.dia-calendario.regado {
+    background-color: #c8e6c9;
+}
+
+.numero-dia {
+    font-weight: bold;
+}
+
+.indicador-rega {
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hormy - Calendário</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Hormy</h1>
+        <nav>
+            <a href="Index.html">Início</a>
+            <a href="Calendario.html" class="atual">Diário</a>
+            <a href="Horta.html">Minha horta</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="calendario">
+            <div class="controles-calendario">
+                <button id="mes-anterior">&lt;</button>
+                <h2 id="mes-atual">Junho 2025</h2>
+                <p>Clique no dia para marcar a rega</p>
+                <button id="proximo-mes">&gt;</button>
+            </div>
+            
+            <div class="dias-semana">
+                <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div>
+                <div>Qui</div><div>Sex</div><div>Sáb</div>
+            </div>
+            
+            <div class="grade-calendario" id="grade-calendario">
+                <!-- Calendario feito no JavaScript -->
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

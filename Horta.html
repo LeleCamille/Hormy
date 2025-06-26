@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hormy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Hormy</h1>
+        <nav>
+            <a href="Calendario.html">Diário</a>
+            <a href="Index.html">Início</a>
+            <a href="Horta.html" class="atual">Minha horta</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="Container-Horta">
+            <h2>Minhas Plantas</h2>
+            <div id="plant-list" class="Horta-Bloco"></div>
+            <div class="AddPlanta-Bloco">
+                <h3>Adicionar Nova Planta</h3>
+                <div id="Adionar-Planta">
+                    <input type="text" id="Nome-Planta">
+                    <select id="Planta-Lista">
+                        <option value="">Tipo de planta</option>
+                        <option value="tomate">Tomate</option>
+                        <option value="beringela">Beringela</option>
+                        <option value="alface">Alface</option>
+                        <option value="batata">Batata</option>
+                    </select>
+                    <button id="Botao-Add">Adicionar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
