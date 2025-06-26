@@ -1,8 +1,10 @@
-:root {
+ :root {
     --background: #f5f5f5;
     --font: #333;
     --main-color: #54c958;
     --blocos: #e8f5e9;
+    --sombra: #0000001a;
+    --hover: #3e8e41;
 }
 
 body {
@@ -36,7 +38,7 @@ nav a {
 }
 
 nav a.atual, nav a:hover {
-    background-color: #3e8e41;
+    background-color: var(--hover);
 }
 
 main {
@@ -57,7 +59,7 @@ button {
 }
 
 button:hover {
-    background-color: #266b28;
+    background-color: var(--hover);
 }
 
 /*PAGE-INICIO*/
@@ -86,7 +88,7 @@ button:hover {
 .Plantas h2 {
     color: var(--main-color);
     margin-top: 0;
-    border-bottom: 1px solid #2E7D32;
+    border-bottom: 1px solid var(--main-color);
     padding-bottom: 0.5rem;
 }
 
@@ -100,23 +102,23 @@ button:hover {
 }
 
 .plant-card {
-    background-color: white;
+    background-color: var(--background);
     border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--sombra);
     position: relative;
 }
 
 .plant-card h3 {
     margin-top: 0;
-    color: #2E7D32;
+    color: var(--main-color);
 }
 
 .add-plant-form {
-    background-color: white;
+    background-color: var(--background);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--sombra);
     margin-top: 2rem;
 }
 
@@ -125,14 +127,14 @@ button:hover {
     width: 100%;
     padding: 0.8rem;
     margin: 0.5rem 0 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--blocos);
     border-radius: 4px;
     box-sizing: border-box;
 }
 
 .add-plant-form button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--background);
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
@@ -144,21 +146,20 @@ button:hover {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 4px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--background);
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #3e8e41;
+    background-color: var(--main-color);
 }
 
 /*PAGE- MINHA HORTA*/
 .Horta-Bloco {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
     margin: 2rem 0;
     border: 2px dotted var(--main-color);
@@ -173,7 +174,7 @@ button:hover {
 
 .plant-card h3 {
     margin-top: 0;
-    color: #2E7D32;
+    color: var(--main-color);
 }
 
 .AddPlanta-Bloco {
@@ -189,7 +190,7 @@ button:hover {
     width: 100%;
     padding: 0.8rem;
     margin: 0.5rem 0 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--blocos);
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -244,44 +245,17 @@ button:hover {
 .dia-calendario {
     aspect-ratio: 1;
     padding: 0.5rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--font);
     border-radius: 4px;
     cursor: pointer;
     position: relative;
 }
 
 .dia-calendario:hover {
-    background-color: #f0f0f0;
+    background-color: var(--blocos);
 }
 
 .dia-calendario.vazio {
-    background-color: #f9f9f9;
+    background-color: var(--background);
     cursor: default;
-}
-
-.dia-calendario.hoje {
-    border: 2px solid #4CAF50;
-}
-
-.dia-calendario.regado {
-    background-color: #c8e6c9;
-}
-
-.numero-dia {
-    font-weight: bold;
-}
-
-.indicador-rega {
-    font-size: 0.7rem;
-    position: absolute;
-    bottom: 4px;
-    right: 4px;
-    background: #4CAF50;
-    color: white;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
