@@ -39,6 +39,18 @@ function ListaPlanta() {
             <p>Próxima rega: XXXX</p>
         `;
         HortaBloco.appendChild(PlantaCard);
+
+        const botaoExcluir = document.createElement('button')
+        botaoExcluir.textContent = 'X'
+        botaoExcluir.classList.add('botao-excluir')
+      
+        botaoExcluir.addEventListener('click', function () {
+          if (textarea) {
+            textarea.remove()
+            novoBotao.remove()
+            botaoExcluir.remove()
+          }
+        })
     });
 }
 
@@ -57,6 +69,8 @@ function BotaoAdicionar() {
         ListaPlanta();
     });
 }
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     ListaPlanta();
